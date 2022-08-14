@@ -1,0 +1,115 @@
+.adopt {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+  overflow: hidden;
+
+  .intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-size: 32px;
+      font-weight: 700;
+      text-align: left;
+    }
+  }
+
+  .petBox {
+    display: flex;
+    justify-content: left;
+
+    @keyframes petElShow {
+      0% {
+        margin-bottom: -20px;
+      }
+
+      100% {
+        margin-bottom: 0px;
+      }
+    }
+
+    .petEl {
+      margin-bottom: -20px;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      animation-name: petElShow;
+      animation-duration: .5s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+
+
+      .imgViewer {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+
+        img {
+          width: inherit;
+          opacity: .7;
+        }
+      }
+
+      &:hover .imgViewer img {
+        transform: scale(1.05);
+        transition: .5s;
+        opacity: 1;
+      }
+
+      .pickBtn {
+        width: 170px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 10px;
+        color: white;
+        background-color: #595959;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+          background-color: #F03F1C;
+        }
+      }
+    }
+  }
+
+  .btnContainer {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .btnAll {
+      color: #545454;
+      cursor: pointer;
+
+      &:hover {
+        color: black;
+        text-decoration: underline;
+      }
+    }
+
+    .directionBtn {
+      width: 30px;
+      height: 30px;
+      border: 2px solid #545454;
+      color: #545454;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #545454;
+        color: white;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "pets": [
+    {
+      "type": "무료",
+      "name": "흰둥이",
+      "src": "pet1.png"
+    },
+    {
+      "type": "유료",
+      "name": "흰둥이",
+      "src": "pet2.png"
+    },
+    {
+      "type": "무료",
+      "name": "흰둥이",
+      "src": "pet3.png"
+    },
+    {
+      "type": "무료",
+      "name": "흰둥이",
+      "src": "pet4.png"
+    },
+    {
+      "type": "찬잉",
+      "name": "은찬잉",
+      "src": "pet5.png"
+    },
+    {
+      "type": "무료",
+      "name": "흰둥이",
+      "src": "pet6.png"
+    },
+    {
+      "type": "무료",
+      "name": "흰둥이",
+      "src": "pet7.png"
+    },
+    {
+      "type": "무료",
+      "name": "흰둥이",
+      "src": "pet8.png"
+    },
+    {
+      "type": "무료",
+      "name": "흰둥이",
+      "src": "pet9.png"
+    }
+    
+  ]
+}

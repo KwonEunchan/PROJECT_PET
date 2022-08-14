@@ -1,0 +1,80 @@
+$myblue : #3A4CA8;
+
+* {
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+
+
+@keyframes bannerShow {
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 40px;
+  }
+}
+
+@keyframes bannerColor {
+  0% {
+    background-color: $myblue;
+    color: white;
+  }
+
+  100% {
+    background-color: #F1F1F1;
+    color: $myblue;
+  }
+
+}
+
+.banner {
+  background-color: $myblue;
+  line-height: 40px;
+  animation: bannerShow .5s linear forwards, bannerColor 2s linear forwards;
+  overflow: hidden;
+}
+
+
+section {
+  width: 1100px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  position: relative;
+}
+
+footer{
+  background-color: #F1F1F1;
+  height: 150px;
+  position: relative;
+
+  .logo{
+    opacity: .2;
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+  }
+  .infoBox{
+    position: absolute;
+    top: 70px;
+    left: 150px;
+    opacity: .2;;
+    p{text-align: left;}
+  }
+  .footerLogo{
+    position: absolute;
+    opacity: .2;
+    right: 0;
+  }
+}

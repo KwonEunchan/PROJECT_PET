@@ -1,0 +1,84 @@
+.campaignBox{
+  width: 450px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .tipBox {
+    box-shadow: 0px 0px 5px 0px rgba(black, .2);
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+  
+    h1 {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 16px;
+      text-align: left;
+    }
+  
+    .infoBox {
+      width: inherit;
+      height: inherit;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+  
+      .infoPicture {
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        background-image: url(../lost.png);
+      }
+  
+      .infoText {
+        margin-left: 30px;
+        margin-bottom: 10px;
+        font-size: 16px;
+  
+        p {
+          text-align: left;
+          font-size: 14px;
+          font-weight: 400;
+  
+          &.infoName {
+            font-size: 20px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  .btnBox{
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+
+    div{
+      width: 220px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      transition: .1s;
+      &:hover{
+        transform:  scale(1.01);
+      }
+      &:active{
+        transform:  scale(.98);
+      }
+      &.btnMore{
+        background-color: #7DB249;
+      }
+      &.btnReport{
+        background-color: #595959;
+      }
+    }
+  }
+}

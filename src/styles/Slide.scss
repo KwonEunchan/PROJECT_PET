@@ -1,0 +1,76 @@
+.slideViewer{
+  width: 600px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+
+  .slideContainer{
+    position: absolute;
+    width: 1800px;
+    height: 300px;
+    display: flex;
+    transition: .2s;
+
+    .slideEl{
+      position: relative;
+      width: 600px;
+      height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      
+      .slideImg{
+        width: inherit;
+        height: inherit;
+        opacity: .7;
+      }
+      &:nth-child(1) .slideImg{
+        background-image: url(../ad1.png);
+      }
+      &:nth-child(2) .slideImg{
+        background-image: url(../ad2.png);
+      }
+      &:nth-child(3) .slideImg{
+        background-image: url(../ad3.png);
+      }
+
+
+    
+      h1{
+        position: absolute;
+        top: 170px;
+        color: white ;
+        font-size: 30px;
+        text-align: left;
+        left: 60px;
+        opacity: 1;
+      }
+    }
+  }
+
+  .btnContainer{
+    width: 100px;
+    position: absolute;
+    left: 60px;
+    bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    .directionBtn{
+      width: 40px;
+      height: 40px;
+      border: 2px solid white;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover{
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}

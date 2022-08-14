@@ -3,13 +3,12 @@ import logo from '../logo.png'
 
 
 export default function Header(){
-	const list = document.querySelector('li');
   return(
 		<>
     <header>
 			<div className="inner">
 				<div className="headerTop">
-					<img src= {logo} className="logo"/>
+					<img src= {logo} className="logo" alt="logo"/>
 				</div>
 				<div className="headerBottom">
 					<ul className="menu">

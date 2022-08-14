@@ -28,14 +28,15 @@ export default function Adopt(){
         <div className="petBox">
           {
           Pet.pets.map((pet,index)=>{
-            if(petView<=index && index<petView+4)
+            if(petView<=index && index<petView+4){
             return(
               <div className="petEl" style={{ 
                 animationDelay : (0.2*(index%4)) +`s`}}>
                 <div className="imgViewer"><img src={pet.src} alt="pet" /></div>
                 <div className="pickBtn">{index===4?"주인 있어요":"자세히 보기"}</div>
               </div>
-            )
+            )}
+            else{return ""}
           })
           }
         </div>

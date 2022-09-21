@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# What is this project?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 개 요
+반려견 분양 서비스를 제공하는 웹 사이트입니다.  
+실제로 동작하지는 않습니다!
 
-## Available Scripts
+## 개발 의도
+고객이 쉽게 사용할 수 있는 인터페이스를 구상하는 것이 모든 서비스의 기초라고 생각합니다.  
+누구나 헤매지 않고 원하는 서비스를 이용할 수 있도록 모던하고도 심플한 느낌으로 설계하였습니다.  
+덧붙이자면 저는 강아지를 아주 좋아합니다.   
+비록 개인을 어필하는 프로젝트지만 봐주시는 모든 분들께서 강아지, 특히 유기 문제에 관심을 가져주시면 좋겠습니다.  
 
-In the project directory, you can run:
+## 사용 스킬
+### REACT
+작은 프로젝트라 컴포넌트를 재사용하는 일은 많지 않았습니다.  
+그러나 JavaScript 코드로부터 데이터를 바인딩하거나, 동적인 이벤트를 적용하는 과정이 순수 HTML+JavaScript 코드보다 간편했습니다.
 
-### `npm start`
+### SCSS
+마찬가지로 작은 프로젝트라 SCSS의 최대 강점인 재사용이나 변수 선언 등의 문법은 사용하지 않았습니다.  
+그러나 Nested 구조로 작성된 코드를 유지보수하는 과정에서 충분히 강점을 느꼈습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 고 찰
+### 비동기 처리
+REACT는 기본적으로 비동기 방식으로 동작한다는 것은 알고 있었습니다.  
+제대로 이해도 못한 채 그냥 그런 줄 알았던 것입니다..  
+비동기 방식은 고객이 느끼는 delay를 배제하지만 코드가 순차적으로 실행하는 것을 보장하지 못합니다.  
+슬라이더를 구현하는 과정에서 state를 활용하였으나, state의 값이 바뀌기도 전에 이동 코드가 동작하며 엉뚱한 슬라이드가 표시되었습니다.  
+결국 본 프로젝트에서는 일반 JavaScirpt 변수를 선언하여 해결하였지만 useEffect를 활용하여 해당 문제를 해결할 수 있음을 알게 되었습니다.  
